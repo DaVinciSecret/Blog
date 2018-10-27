@@ -26,7 +26,7 @@ header,main,footer{
     top: -50px;
     transition: all 1s;
     border: 1px solid #eee;
-    background: linear-gradient(#333,transparent);
+    background: linear-gradient(#500,#333);
     /* background: transparent; */
 }
 .head-menu>ul{
@@ -347,83 +347,53 @@ span.login-close:hover{
     transition: all 1s; 
     /* background: linear-gradient(transparent,#000); */
     background: transparen;
+    opacity: 0;
     margin-top: 100px; 
-
 }
 div.body-middle{
+    background: #fff;
     width: 100%;
     height: 800px;
     position: relative;
     border: 1px solid #f44;
     overflow: hidden;
 }
-div.geo1,
-div.geo2,
-div.geo3,
 
-div.geo5,
-div.geo6,
-div.geo7{
-    position: absolute;
-    width: 0;
-    height: 0;
-    border: 100px solid #1E90FF;
-    box-shadow: 1px -1px 5px 2px #333;
-    transform: rotate(-105deg) scaleY(2) scaleX(0.8) rotate(45deg) ;
-    right: 60px;
-    bottom: 60px;
-    cursor: pointer;
-    line-height: 50px;
-    transition: all 0.3s;
-    perspective: 500px;
-    transform-style: preserve-3d;
-    color: #000;
-    transform-origin: bottom right;
+div.geo-origin{
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(#0055ff,#00bbff);
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: all 0.5s;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 2px #333;
+    background: transparent;
+    overflow: hidden;
 }
-div.geo1{
-    transform: rotate(-30deg) scaleY(2) scaleX(0.8) rotate(45deg) ;
-    border: 100px solid #00BFFF;
+div.geo-origin:hover{
+    height: 200px;
+    border-radius: 25px;
 }
-div.geo1:hover{
-     z-index: +1; 
-     box-shadow: 0 0 10px 3px#000;
+
+div.geo-origin div{
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(#0055ff,#00bbff);
+    /*position: absolute;*/
+    /*bottom: 0px;
+    right: 0px;*/
+    overflow: hidden;
+    transition: all 0.5s;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 2px #000;
 }
-div.geo2{
-    transform: rotate(-15deg) scaleY(2) scaleX(0.8) rotate(45deg) ;
-    border: 100px solid #4169E1;
-}
-div.geo2:hover{
-    z-index: +1;
+div.geo-origin div:hover{
     box-shadow: 0 0 10px 3px #000;
+    background: radial-gradient(#00bbff,#00bbff);
 }
-div.geo3{
-    transform: rotate(0deg) scaleY(2) scaleX(0.8) rotate(45deg) ;
-    border: 100px solid #a169E1;
-}
-div.geo5{
-    transform: rotate(-75deg) scaleY(2) scaleX(0.8) rotate(45deg) ;
-    border: 100px solid #f44;
-} 
-div.geo5:hover{
-    z-index: +1;
-    box-shadow: 0 0 10px 3px#000;
-}
-div.geo6{
-    transform: rotate(-90deg) scaleY(2) scaleX(0.8) rotate(45deg) ;
-    border: 100px solid #FF0;
-} 
-div.geo6:hover{
-    z-index: +1;
-    box-shadow: 0 0 10px 3px #000;
-}
-div.geo7{
-    transform: rotate(-105deg) scaleY(2) scaleX(0.8) rotate(45deg) ; 
-    border: 100px solid #0f0;
-} 
-div.geo7 :hover{
-    z-index:+1;
-    box-shadow: 0 0 10px 3px #000;
-}
+
 div.geo0{
     position: absolute;
     width: 100%;
@@ -431,6 +401,7 @@ div.geo0{
     background: #333;
     box-shadow: 0 0 5px 2px #000;
     transform: rotate(-10deg);
+
     /* transform: rotate(-60deg) scaleY(2) scaleX(0.8) rotate(45deg) ;
     border: 100px solid #333; */
 }
@@ -456,7 +427,52 @@ div.geo0 a:hover{
     color: #fa0;
     text-decoration: underline;
 }
+.img-panel0{
+    width: 65%;
+    height: 500px;
+    border:1px solid #333;
+    position: absolute;
+    left: 100px;
+    bottom: 50px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #000;
+}
+.img-panel1,.img-panel2,.img-panel3,.img-panel4{
+    width: 100%;
+    height: 100%;
+    border:1px solid #333;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    text-align: center;
+    line-height: 500px;
+    font-size: 50px;
+    color: #eee;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #000;
+}
+.img-panel2{
+ background: #ff0
+}
+.img-panel3{
+ background: #f0f
+}
+.img-panel4{
+  background: #333  
+}
 
+.img-subtitle{
+    width: 200px;
+    width: 20%;
+    height: 300px;
+    right: 4%;
+    top: 250px;
+    position: absolute;
+    border:1px solid #aaa;
+    box-shadow: 0 0 5px #000;
+    text-align: center;
+    border-radius: 5px;
+}
 
 
 
