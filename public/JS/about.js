@@ -13,29 +13,40 @@ $(function(){
         var top = $(window).scrollTop();
         console.log(top);
 
-        // if(top>140){
-        //     $("section.main-body").css({
-        //         "margin-top":"50px",
-        //         "opacity":"1"
-        //     })
-        // }
-        // if(top>200){
-        //     //--------main------
-        //     $("section.main-Img").css(
-        //         {
-        //             "margin-top":"100px",
-        //             "opacity":"1"
-        //         }
-        //     );
-        // }else{
-        //     //--------main------
-        //     $("section.main-Img").css(
-        //         {
-        //             "height":"600px",
-        //             "opacity":"1"
-        //         }
-        //     );
-        // }
+        if(top > 150){
+            $("section.main-Img").css(
+                {
+                    "height":"300px",
+                    
+                }
+            );
+        }
+        if(top < 80){
+            $("section.main-Img").css(
+                {
+                    "height":"600px",
+                    
+                }
+            );
+        }
+        if(top>180){
+            //--------main------
+            $("section.main-body").css(
+                {
+                    "margin-top":"50px",
+                    "opacity":"1"
+                }
+            );
+        }
+        else{
+            //--------main------
+            $("section.main-body").css(
+                {
+                    "margin-top":"100px",
+                    "opacity":"0"
+                }
+            );
+        }
         // if(top>300){
         //     $("section.main-Img").css(
         //         {
@@ -122,6 +133,17 @@ $(function(){
                 "height":"0px"
             });
         }
+    })
+
+
+    //中间选择面板
+    $(".geo0>ul").on('click','a',function(e){
+        e.preventDefault();
+        var $a = $(this);
+        //alert($a.parent().index());
+        var i = $a.parent().index();
+        //console.log($('.geo-origin').find('div').eq(i).html());
+        $('.img-panel0').find('div').eq(i).removeClass('do-hide').siblings().addClass('do-hide');
     })
 
 
